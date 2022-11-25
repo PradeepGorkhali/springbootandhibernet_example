@@ -6,11 +6,13 @@ import javax.persistence.*;
 @Table(name = "department")
 public class Department {
 
+  /*data validation
+  primary key Id*/
   @Id
   @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "department_generator")
   private long id;
 
-  @Column(name = "title")
+  @Column(name = "name")
   private String title;
 
   @Column(name = "description")

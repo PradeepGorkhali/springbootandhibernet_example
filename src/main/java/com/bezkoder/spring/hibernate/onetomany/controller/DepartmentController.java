@@ -29,63 +29,63 @@ public class DepartmentController {
   @Autowired
   DepartmentRepository departmentRepository;
 
-  @GetMapping("/tutorials")
-  public ResponseEntity<List<Department>> getAllTutorials(@RequestParam(required = false) String title) {
-    List<Department> tutorials = new ArrayList<Department>();
+  @GetMapping("/departments")
+  public ResponseEntity<List<Department>> getAllTutorials(@RequestParam(required = false) String name) {
+    List<Department> departments = new ArrayList<Department>();
 
-    if (title == null)
-      departmentRepository.findAll().forEach(tutorials::add);
+    if (name == null)
+      departmentRepository.findAll().forEach(departments::add);
     else
-      departmentRepository.findByPublished(Boolean.parseBoolean(title)).forEach(tutorials::add);
+      departmentRepository.findByPublished(Boolean.parseBoolean(name)).forEach(departments::add);
 
-    if (tutorials.isEmpty()) {
+    if (departments.isEmpty()) {
       return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    return new ResponseEntity<>(tutorials, HttpStatus.OK);
+    return new ResponseEntity<>(departments, HttpStatus.OK);
   }
 
-  @GetMapping("/tutorials/{id}")
-  public ResponseEntity<Department> getTutorialById(@PathVariable("id") long id) {
-    Department tutorial = departmentRepository.findById(id)
-        .orElseThrow(() -> new ResourceNotFoundException("Not found Tutorial with id = " + id));
+  @GetMapping("/departments/{id}")
+  public ResponseEntity<Department> getDepartmentId(@PathVariable("id") long id) {
+    Department department = departmentRepository.findById(id)
+        .orElseThrow(() -> new ResourceNotFoundException("Not found Department with id = " + id));
 
-    return new ResponseEntity<>(tutorial, HttpStatus.OK);
+    return new ResponseEntity<>(department, HttpStatus.OK);
   }
 
-  @PostMapping("/tutorials")
-  public ResponseEntity<Department> createTutorial(@RequestBody Department tutorial) {
-    Department _tutorial = departmentRepository.save(new Department(tutorial.getTitle(), tutorial.getDescription(), true));
-    return new ResponseEntity<>(_tutorial, HttpStatus.CREATED);
+  @PostMapping("/departments")
+  public ResponseEntity<Department> createDepartment(@RequestBody Department departments) {
+    Department _departments = departmentRepository.save(new Department(departments.getTitle(), departments.getDescription(), true));
+    return new ResponseEntity<>(_departments, HttpStatus.CREATED);
   }
 
-  @PutMapping("/tutorials/{id}")
-  public ResponseEntity<Department> updateTutorial(@PathVariable("id") long id, @RequestBody Department tutorial) {
-    Department _tutorial = departmentRepository.findById(id)
-        .orElseThrow(() -> new ResourceNotFoundException("Not found Tutorial with id = " + id));
+  @PutMapping("/departments/{id}")
+  public ResponseEntity<Department> updateDepartment(@PathVariable("id") long id, @RequestBody Department departments) {
+    Department _departments = departmentRepository.findById(id)
+        .orElseThrow(() -> new ResourceNotFoundException("Not found Department with id = " + id));
 
-    _tutorial.setTitle(tutorial.getTitle());
-    _tutorial.setDescription(tutorial.getDescription());
-    _tutorial.setPublished(tutorial.isPublished());
+    _departments.setTitle(departments.getTitle());
+    _departments.setDescription(departments.getDescription());
+    _departments.setPublished(departments.isPublished());
     
-    return new ResponseEntity<>(departmentRepository.save(_tutorial), HttpStatus.OK);
+    return new ResponseEntity<>(departmentRepository.save(_departments), HttpStatus.OK);
   }
 
-  @DeleteMapping("/tutorials/{id}")
+  @DeleteMapping("/departments/{id}")
   public ResponseEntity<HttpStatus> deleteTutorial(@PathVariable("id") long id) {
     departmentRepository.deleteById(id);
     
     return new ResponseEntity<>(HttpStatus.NO_CONTENT);
   }
 
-  @DeleteMapping("/tutorials")
+  @DeleteMapping("/departments")
   public ResponseEntity<HttpStatus> deleteAllTutorials() {
     departmentRepository.deleteAll();
     
     return new ResponseEntity<>(HttpStatus.NO_CONTENT);
   }
 
-  @GetMapping("/tutorials/published")
+  @GetMapping("/departments/published")
   public ResponseEntity<List<Department>> findByPublished() {
     List<Department> tutorials = departmentRepository.findByTitleContaining(String.valueOf(true));
 

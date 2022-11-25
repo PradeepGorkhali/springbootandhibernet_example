@@ -31,59 +31,59 @@ public class EmployeeController {
   @Autowired
   private EmployeeRepository employeeRepository;
 
-  @GetMapping("/tutorials/{tutorialId}/comments")
-  public ResponseEntity<List<Employee>> getAllCommentsByTutorialId(@PathVariable(value = "tutorialId") Long tutorialId) {
-    if (!departmentRepository.existsById(tutorialId)) {
-      throw new ResourceNotFoundException("Not found Tutorial with id = " + tutorialId);
+  @GetMapping("/departments/{departmentId}/employee")
+  public ResponseEntity<List<Employee>> getAllEmployeeByDepartmentsId(@PathVariable(value = "departmentId") Long departmentId) {
+    if (!departmentRepository.existsById(departmentId)) {
+      throw new ResourceNotFoundException("Not found Department with id = " + departmentId);
     }
 
-    List<Employee> comments = employeeRepository.findByDepartmentId(tutorialId);
+    List<Employee> comments = employeeRepository.findByDepartmentId(departmentId);
     return new ResponseEntity<>(comments, HttpStatus.OK);
   }
 
-  @GetMapping("/comments/{id}")
-  public ResponseEntity<Employee> getCommentsByTutorialId(@PathVariable(value = "id") Long id) {
+  @GetMapping("/employee/{id}")
+  public ResponseEntity<Employee> getEmployeeByDepartmentsId(@PathVariable(value = "id") Long id) {
     Employee comment = employeeRepository.findById(id)
-        .orElseThrow(() -> new ResourceNotFoundException("Not found Comment with id = " + id));
+        .orElseThrow(() -> new ResourceNotFoundException("Not found Employee with id = " + id));
 
     return new ResponseEntity<>(comment, HttpStatus.OK);
   }
 
-  @PostMapping("/tutorials/{tutorialId}/comments")
-  public ResponseEntity<Employee> createComment(@PathVariable(value = "tutorialId") Long tutorialId,
+  @PostMapping("/departments/{departmentId}/employee")
+  public ResponseEntity<Employee> createComment(@PathVariable(value = "departmentId") Long departmentId,
                                                 @RequestBody Employee commentRequest) {
-    Employee comment = departmentRepository.findById(tutorialId).map(tutorial -> {
+    Employee comment = departmentRepository.findById(departmentId).map(tutorial -> {
       commentRequest.setDepartment(tutorial);
       return employeeRepository.save(commentRequest);
-    }).orElseThrow(() -> new ResourceNotFoundException("Not found Tutorial with id = " + tutorialId));
+    }).orElseThrow(() -> new ResourceNotFoundException("Not found Department with id = " + departmentId));
 
     return new ResponseEntity<>(comment, HttpStatus.CREATED);
   }
 
-  @PutMapping("/comments/{id}")
+  @PutMapping("/employee/{id}")
   public ResponseEntity<Employee> updateComment(@PathVariable("id") long id, @RequestBody Employee commentRequest) {
     Employee comment = employeeRepository.findById(id)
         .orElseThrow(() -> new ResourceNotFoundException("CommentId " + id + "not found"));
 
-    comment.setContent(commentRequest.getContent());
+    comment.setemp_name(commentRequest.getemp_name());
 
     return new ResponseEntity<>(employeeRepository.save(comment), HttpStatus.OK);
   }
 
-  @DeleteMapping("/comments/{id}")
+  @DeleteMapping("/employee/{id}")
   public ResponseEntity<HttpStatus> deleteComment(@PathVariable("id") long id) {
     employeeRepository.deleteById(id);
 
     return new ResponseEntity<>(HttpStatus.NO_CONTENT);
   }
   
-  @DeleteMapping("/tutorials/{tutorialId}/comments")
-  public ResponseEntity<List<Employee>> deleteAllCommentsOfTutorial(@PathVariable(value = "tutorialId") Long tutorialId) {
-    if (!departmentRepository.existsById(tutorialId)) {
-      throw new ResourceNotFoundException("Not found Tutorial with id = " + tutorialId);
+  @DeleteMapping("/tutorials/{departmentId}/employee")
+  public ResponseEntity<List<Employee>> deleteAllCommentsOfTutorial(@PathVariable(value = "departmentId") Long departmentId) {
+    if (!departmentRepository.existsById(departmentId)) {
+      throw new ResourceNotFoundException("Not found Tutorial with id = " + departmentId);
     }
 
-    employeeRepository.deleteByDepartmentId(tutorialId);
+    employeeRepository.deleteByDepartmentId(departmentId);
     return new ResponseEntity<>(HttpStatus.NO_CONTENT);
   }
 }

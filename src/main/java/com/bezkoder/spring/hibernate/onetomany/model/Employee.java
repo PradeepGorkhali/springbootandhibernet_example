@@ -15,7 +15,7 @@ public class Employee {
   private Long id;
 
   @Lob
-  private String content;
+  private String emp_name;
 
 //  @ManyToOne(fetch = FetchType.EAGER, optional = false)
   @ManyToOne(fetch = FetchType.LAZY, optional = false)
@@ -28,12 +28,12 @@ public class Employee {
     return id;
   }
 
-  public String getContent() {
-    return content;
+  public String getemp_name() {
+    return emp_name;
   }
 
-  public void setContent(String content) {
-    this.content = content;
+  public void setemp_name(String emp_name) {
+    this.emp_name = emp_name;
   }
 
   public Department getDepartment() {

@@ -22,6 +22,6 @@ public class LogController {
         logger.error("Log level: ERROR");
         logger.warn("Log level: WARN");
 
-        return "Hey! You can check the output in the logs";
+        return "detail logs are availabe on application.log file.";
     }
 }

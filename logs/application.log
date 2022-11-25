@@ -71,3 +71,300 @@
 २०२२-११-२५ ११:५८:५४.३३२  INFO 24280 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : Started SpringBootOneToManyApplication in 1.822 seconds (JVM running for 2.278)
 २०२२-११-२५ ११:५८:५४.३३३  INFO 24280 --- [main] c.b.spring.hibernate.onetomany.Execute   : Spartan Log4J
 २०२२-११-२५ ११:५८:५४.३३३  INFO 24280 --- [main] c.b.spring.hibernate.onetomany.Execute   : Test Log4J
+२०२२-११-२५ १५:२२:५१.०९७  INFO 27589 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : Starting SpringBootOneToManyApplication using Java 19.0.1 on spartan-2.local with PID 27589 (/Users/spartan/Downloads/spring-boot-one-to-many-master 2/target/classes started by spartan in /Users/spartan/Downloads/spring-boot-one-to-many-master 2)
+२०२२-११-२५ १५:२२:५१.०९८  INFO 27589 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : No active profile set, falling back to default profiles: default
+२०२२-११-२५ १५:२२:५१.३३६  INFO 27589 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+२०२२-११-२५ १५:२२:५१.३५८  INFO 27589 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+२०२२-११-२५ १५:२२:५१.६२४  INFO 27589 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+२०२२-११-२५ १५:२२:५१.६३३  INFO 27589 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+२०२२-११-२५ १५:२२:५१.६३४  INFO 27589 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+२०२२-११-२५ १५:२२:५१.६६९  INFO 27589 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+२०२२-११-२५ १५:२२:५१.६६९  INFO 27589 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 553 ms
+२०२२-११-२५ १५:२२:५१.७५९  INFO 27589 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+२०२२-११-२५ १५:२२:५१.७८४  INFO 27589 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+२०२२-११-२५ १५:२२:५१.८६५  INFO 27589 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+२०२२-११-२५ १५:२२:५१.९०३  INFO 27589 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+२०२२-११-२५ १५:२२:५२.०४४  INFO 27589 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+२०२२-११-२५ १५:२२:५२.०५२  INFO 27589 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+२०२२-११-२५ १५:२२:५२.२५८ DEBUG 27589 --- [main] org.hibernate.SQL                        : alter table employee drop foreign key FKbejtwvg9bxus2mffsm3swj3u9
+२०२२-११-२५ १५:२२:५२.३४६ DEBUG 27589 --- [main] org.hibernate.SQL                        : drop table if exists department
+२०२२-११-२५ १५:२२:५२.३६५ DEBUG 27589 --- [main] org.hibernate.SQL                        : drop table if exists department_generator
+२०२२-११-२५ १५:२२:५२.३७३ DEBUG 27589 --- [main] org.hibernate.SQL                        : drop table if exists employee
+२०२२-११-२५ १५:२२:५२.३७६ DEBUG 27589 --- [main] org.hibernate.SQL                        : drop table if exists employee_generator
+२०२२-११-२५ १५:२२:५२.३८२ DEBUG 27589 --- [main] org.hibernate.SQL                        : create table department (id bigint not null, description varchar(255), published bit, title varchar(255), primary key (id)) engine=InnoDB
+२०२२-११-२५ १५:२२:५२.३९० DEBUG 27589 --- [main] org.hibernate.SQL                        : create table department_generator (next_val bigint) engine=InnoDB
+२०२२-११-२५ १५:२२:५२.३९४ DEBUG 27589 --- [main] org.hibernate.SQL                        : insert into department_generator values ( 1 )
+२०२२-११-२५ १५:२२:५२.३९७ DEBUG 27589 --- [main] org.hibernate.SQL                        : create table employee (id bigint not null, content longtext, department_id bigint not null, primary key (id)) engine=InnoDB
+२०२२-११-२५ १५:२२:५२.४०१ DEBUG 27589 --- [main] org.hibernate.SQL                        : create table employee_generator (next_val bigint) engine=InnoDB
+२०२२-११-२५ १५:२२:५२.४०५ DEBUG 27589 --- [main] org.hibernate.SQL                        : insert into employee_generator values ( 1 )
+२०२२-११-२५ १५:२२:५२.४०६ DEBUG 27589 --- [main] org.hibernate.SQL                        : alter table employee add constraint FKbejtwvg9bxus2mffsm3swj3u9 foreign key (department_id) references department (id) on delete cascade
+२०२२-११-२५ १५:२२:५२.४२१  INFO 27589 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+२०२२-११-२५ १५:२२:५२.४२४  INFO 27589 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+२०२२-११-२५ १५:२२:५२.६००  WARN 27589 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+२०२२-११-२५ १५:२२:५२.७६१  INFO 27589 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+२०२२-११-२५ १५:२२:५२.७६५  INFO 27589 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : Started SpringBootOneToManyApplication in 1.823 seconds (JVM running for 2.156)
+२०२२-११-२५ १५:२२:५२.७६६  INFO 27589 --- [main] c.b.spring.hibernate.onetomany.Execute   : Spartan Log4J
+२०२२-११-२५ १५:२२:५२.७६६  INFO 27589 --- [main] c.b.spring.hibernate.onetomany.Execute   : Test Log4J
+२०२२-११-२५ १५:३७:५३.२९२  INFO 27589 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+२०२२-११-२५ १५:३७:५३.२९७  INFO 27589 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+२०२२-११-२५ १५:३७:५३.३२०  INFO 27589 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 23 ms
+२०२२-११-२५ १५:३८:१७.०८३  INFO 27589 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+२०२२-११-२५ १५:३८:१७.०९०  INFO 27589 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+२०२२-११-२५ १५:३८:१७.१००  INFO 27589 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+२०२२-११-२५ १५:३८:२४.८४५  INFO 27694 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : Starting SpringBootOneToManyApplication using Java 19.0.1 on spartan-2.local with PID 27694 (/Users/spartan/Downloads/spring-boot-one-to-many-master 2/target/classes started by spartan in /Users/spartan/Downloads/spring-boot-one-to-many-master 2)
+२०२२-११-२५ १५:३८:२४.८४६  INFO 27694 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : No active profile set, falling back to default profiles: default
+२०२२-११-२५ १५:३८:२५.०८७  INFO 27694 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+२०२२-११-२५ १५:३८:२५.१०८  INFO 27694 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
+२०२२-११-२५ १५:३८:२५.३३६  INFO 27694 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+२०२२-११-२५ १५:३८:२५.३४१  INFO 27694 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+२०२२-११-२५ १५:३८:२५.३४१  INFO 27694 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+२०२२-११-२५ १५:३८:२५.३७३  INFO 27694 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+२०२२-११-२५ १५:३८:२५.३७४  INFO 27694 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 510 ms
+२०२२-११-२५ १५:३८:२५.४५९  INFO 27694 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+२०२२-११-२५ १५:३८:२५.४८२  INFO 27694 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+२०२२-११-२५ १५:३८:२५.५६१  INFO 27694 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+२०२२-११-२५ १५:३८:२५.६०४  INFO 27694 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+२०२२-११-२५ १५:३८:२५.७१५  INFO 27694 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+२०२२-११-२५ १५:३८:२५.७२३  INFO 27694 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+२०२२-११-२५ १५:३८:२५.९३६ DEBUG 27694 --- [main] org.hibernate.SQL                        : alter table employee drop foreign key FKbejtwvg9bxus2mffsm3swj3u9
+२०२२-११-२५ १५:३८:२६.०१६ DEBUG 27694 --- [main] org.hibernate.SQL                        : drop table if exists department
+२०२२-११-२५ १५:३८:२६.०२३ DEBUG 27694 --- [main] org.hibernate.SQL                        : drop table if exists department_generator
+२०२२-११-२५ १५:३८:२६.०२७ DEBUG 27694 --- [main] org.hibernate.SQL                        : drop table if exists employee
+२०२२-११-२५ १५:३८:२६.०३० DEBUG 27694 --- [main] org.hibernate.SQL                        : drop table if exists employee_generator
+२०२२-११-२५ १५:३८:२६.०३५ DEBUG 27694 --- [main] org.hibernate.SQL                        : create table department (id bigint not null, description varchar(255), published bit, title varchar(255), primary key (id)) engine=InnoDB
+२०२२-११-२५ १५:३८:२६.०४५ DEBUG 27694 --- [main] org.hibernate.SQL                        : create table department_generator (next_val bigint) engine=InnoDB
+२०२२-११-२५ १५:३८:२६.०५१ DEBUG 27694 --- [main] org.hibernate.SQL                        : insert into department_generator values ( 1 )
+२०२२-११-२५ १५:३८:२६.०५५ DEBUG 27694 --- [main] org.hibernate.SQL                        : create table employee (id bigint not null, content longtext, department_id bigint not null, primary key (id)) engine=InnoDB
+२०२२-११-२५ १५:३८:२६.०५९ DEBUG 27694 --- [main] org.hibernate.SQL                        : create table employee_generator (next_val bigint) engine=InnoDB
+२०२२-११-२५ १५:३८:२६.०६२ DEBUG 27694 --- [main] org.hibernate.SQL                        : insert into employee_generator values ( 1 )
+२०२२-११-२५ १५:३८:२६.०६४ DEBUG 27694 --- [main] org.hibernate.SQL                        : alter table employee add constraint FKbejtwvg9bxus2mffsm3swj3u9 foreign key (department_id) references department (id) on delete cascade
+२०२२-११-२५ १५:३८:२६.०७६  INFO 27694 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+२०२२-११-२५ १५:३८:२६.०७९  INFO 27694 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+२०२२-११-२५ १५:३८:२६.२४८  WARN 27694 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+२०२२-११-२५ १५:३८:२६.३९०  INFO 27694 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+२०२२-११-२५ १५:३८:२६.३९४  INFO 27694 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : Started SpringBootOneToManyApplication in 1.696 seconds (JVM running for 2.184)
+२०२२-११-२५ १५:३८:२६.३९५  INFO 27694 --- [main] c.b.spring.hibernate.onetomany.Execute   : Spartan Log4J
+२०२२-११-२५ १५:३८:२६.३९५  INFO 27694 --- [main] c.b.spring.hibernate.onetomany.Execute   : Test Log4J
+२०२२-११-२५ १५:३८:४१.१९२  INFO 27694 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+२०२२-११-२५ १५:३८:४१.१९३  INFO 27694 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+२०२२-११-२५ १५:३८:४१.१९७  INFO 27694 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+२०२२-११-२५ १५:३८:४१.२८१ DEBUG 27694 --- [http-nio-8081-exec-1] org.hibernate.SQL                        : select department0_.id as id1_0_, department0_.description as descript2_0_, department0_.published as publishe3_0_, department0_.title as title4_0_ from department department0_
+२०२२-११-२५ १५:३९:०३.३६१ DEBUG 27694 --- [http-nio-8081-exec-3] org.hibernate.SQL                        : select next_val as id_val from department_generator for update
+२०२२-११-२५ १५:३९:०३.३६३ DEBUG 27694 --- [http-nio-8081-exec-3] org.hibernate.SQL                        : update department_generator set next_val= ? where next_val=?
+२०२२-११-२५ १५:३९:०३.३६९ DEBUG 27694 --- [http-nio-8081-exec-3] org.hibernate.SQL                        : select next_val as id_val from department_generator for update
+२०२२-११-२५ १५:३९:०३.३७० DEBUG 27694 --- [http-nio-8081-exec-3] org.hibernate.SQL                        : update department_generator set next_val= ? where next_val=?
+२०२२-११-२५ १५:३९:०३.३८८ DEBUG 27694 --- [http-nio-8081-exec-3] org.hibernate.SQL                        : insert into department (description, published, title, id) values (?, ?, ?, ?)
+२०२२-११-२५ १५:३९:०३.३८९ TRACE 27694 --- [http-nio-8081-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Project Manager]
+२०२२-११-२५ १५:३९:०३.३८९ TRACE 27694 --- [http-nio-8081-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BOOLEAN] - [true]
+२०२२-११-२५ १५:३९:०३.३८९ TRACE 27694 --- [http-nio-8081-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Software Engineer]
+२०२२-११-२५ १५:३९:०३.३८९ TRACE 27694 --- [http-nio-8081-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [1]
+२०२२-११-२५ १५:३९:३६.५२१ DEBUG 27694 --- [http-nio-8081-exec-4] org.hibernate.SQL                        : select department0_.id as id1_0_, department0_.description as descript2_0_, department0_.published as publishe3_0_, department0_.title as title4_0_ from department department0_
+२०२२-११-२५ १५:५२:५३.०१५  INFO 27694 --- [http-nio-8081-exec-7] c.b.s.h.o.controller.LogController       : Log level: INFO
+२०२२-११-२५ १५:५२:५३.०१८ ERROR 27694 --- [http-nio-8081-exec-7] c.b.s.h.o.controller.LogController       : Log level: ERROR
+२०२२-११-२५ १५:५२:५३.०१८  WARN 27694 --- [http-nio-8081-exec-7] c.b.s.h.o.controller.LogController       : Log level: WARN
+२०२२-११-२५ १५:५३:०६.३८१  INFO 27694 --- [http-nio-8081-exec-8] c.b.s.h.o.controller.LogController       : Log level: INFO
+२०२२-११-२५ १५:५३:०६.३८४ ERROR 27694 --- [http-nio-8081-exec-8] c.b.s.h.o.controller.LogController       : Log level: ERROR
+२०२२-११-२५ १५:५३:०६.३८५  WARN 27694 --- [http-nio-8081-exec-8] c.b.s.h.o.controller.LogController       : Log level: WARN
+२०२२-११-२५ १५:५३:३९.७०६  INFO 27694 --- [http-nio-8081-exec-9] c.b.s.h.o.controller.LogController       : Log level: INFO
+२०२२-११-२५ १५:५३:३९.७०८ ERROR 27694 --- [http-nio-8081-exec-9] c.b.s.h.o.controller.LogController       : Log level: ERROR
+२०२२-११-२५ १५:५३:३९.७०८  WARN 27694 --- [http-nio-8081-exec-9] c.b.s.h.o.controller.LogController       : Log level: WARN
+२०२२-११-२५ १५:५३:४४.७५३  INFO 27694 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+२०२२-११-२५ १५:५३:४४.७६१  INFO 27694 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+२०२२-११-२५ १५:५३:४४.७७६  INFO 27694 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+२०२२-११-२५ १५:५३:५०.२२१  INFO 27812 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : Starting SpringBootOneToManyApplication using Java 19.0.1 on spartan-2.local with PID 27812 (/Users/spartan/Downloads/spring-boot-one-to-many-master 2/target/classes started by spartan in /Users/spartan/Downloads/spring-boot-one-to-many-master 2)
+२०२२-११-२५ १५:५३:५०.२२१  INFO 27812 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : No active profile set, falling back to default profiles: default
+२०२२-११-२५ १५:५३:५०.४५८  INFO 27812 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+२०२२-११-२५ १५:५३:५०.४७८  INFO 27812 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
+२०२२-११-२५ १५:५३:५०.७२४  INFO 27812 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+२०२२-११-२५ १५:५३:५०.७६२  INFO 27812 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+२०२२-११-२५ १५:५३:५०.७६३  INFO 27812 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+२०२२-११-२५ १५:५३:५०.८६८  INFO 27812 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+२०२२-११-२५ १५:५३:५०.८६८  INFO 27812 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 629 ms
+२०२२-११-२५ १५:५३:५०.९५२  INFO 27812 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+२०२२-११-२५ १५:५३:५०.९७९  INFO 27812 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+२०२२-११-२५ १५:५३:५१.०५२  INFO 27812 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+२०२२-११-२५ १५:५३:५१.०९१  INFO 27812 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+२०२२-११-२५ १५:५३:५१.२०२  INFO 27812 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+२०२२-११-२५ १५:५३:५१.२११  INFO 27812 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+२०२२-११-२५ १५:५३:५१.४३२ DEBUG 27812 --- [main] org.hibernate.SQL                        : alter table employee drop foreign key FKbejtwvg9bxus2mffsm3swj3u9
+२०२२-११-२५ १५:५३:५१.५१९ DEBUG 27812 --- [main] org.hibernate.SQL                        : drop table if exists department
+२०२२-११-२५ १५:५३:५१.५३० DEBUG 27812 --- [main] org.hibernate.SQL                        : drop table if exists department_generator
+२०२२-११-२५ १५:५३:५१.५३४ DEBUG 27812 --- [main] org.hibernate.SQL                        : drop table if exists employee
+२०२२-११-२५ १५:५३:५१.५३७ DEBUG 27812 --- [main] org.hibernate.SQL                        : drop table if exists employee_generator
+२०२२-११-२५ १५:५३:५१.५४१ DEBUG 27812 --- [main] org.hibernate.SQL                        : create table department (id bigint not null, description varchar(255), published bit, title varchar(255), primary key (id)) engine=InnoDB
+२०२२-११-२५ १५:५३:५१.५५० DEBUG 27812 --- [main] org.hibernate.SQL                        : create table department_generator (next_val bigint) engine=InnoDB
+२०२२-११-२५ १५:५३:५१.५५४ DEBUG 27812 --- [main] org.hibernate.SQL                        : insert into department_generator values ( 1 )
+२०२२-११-२५ १५:५३:५१.५५८ DEBUG 27812 --- [main] org.hibernate.SQL                        : create table employee (id bigint not null, content longtext, department_id bigint not null, primary key (id)) engine=InnoDB
+२०२२-११-२५ १५:५३:५१.५६२ DEBUG 27812 --- [main] org.hibernate.SQL                        : create table employee_generator (next_val bigint) engine=InnoDB
+२०२२-११-२५ १५:५३:५१.५६६ DEBUG 27812 --- [main] org.hibernate.SQL                        : insert into employee_generator values ( 1 )
+२०२२-११-२५ १५:५३:५१.५६८ DEBUG 27812 --- [main] org.hibernate.SQL                        : alter table employee add constraint FKbejtwvg9bxus2mffsm3swj3u9 foreign key (department_id) references department (id) on delete cascade
+२०२२-११-२५ १५:५३:५१.५८२  INFO 27812 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+२०२२-११-२५ १५:५३:५१.५८५  INFO 27812 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+२०२२-११-२५ १५:५३:५१.७५६  WARN 27812 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+२०२२-११-२५ १५:५३:५१.९०५  INFO 27812 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+२०२२-११-२५ १५:५३:५१.९११  INFO 27812 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : Started SpringBootOneToManyApplication in 1.837 seconds (JVM running for 2.277)
+२०२२-११-२५ १५:५३:५१.९११  INFO 27812 --- [main] c.b.spring.hibernate.onetomany.Execute   : Spartan Log4J
+२०२२-११-२५ १५:५३:५१.९१२  INFO 27812 --- [main] c.b.spring.hibernate.onetomany.Execute   : Test Log4J
+२०२२-११-२५ १५:५३:५६.१६९  INFO 27812 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+२०२२-११-२५ १५:५३:५६.१७०  INFO 27812 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+२०२२-११-२५ १५:५३:५६.१७२  INFO 27812 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+२०२२-११-२५ १५:५३:५६.१९४  INFO 27812 --- [http-nio-8081-exec-1] c.b.s.h.o.controller.LogController       : Log level: INFO
+२०२२-११-२५ १५:५३:५६.१९४ ERROR 27812 --- [http-nio-8081-exec-1] c.b.s.h.o.controller.LogController       : Log level: ERROR
+२०२२-११-२५ १५:५३:५६.१९४  WARN 27812 --- [http-nio-8081-exec-1] c.b.s.h.o.controller.LogController       : Log level: WARN
+२०२२-११-२५ १५:५९:५१.१७९  WARN 27812 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s827ms), soft-evicting connections from pool.
+२०२२-११-२५ १६:१२:२९.४१४  WARN 27812 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s116ms).
+२०२२-११-२५ १६:१५:२८.२९९  WARN 27812 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m58s893ms).
+२०२२-११-२५ १६:२६:५४.५५०  INFO 27812 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+२०२२-११-२५ १६:२६:५४.५६७  INFO 27812 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+२०२२-११-२५ १६:२६:५४.५७१  INFO 27812 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+२०२२-११-२५ १६:२७:०२.३५१  INFO 28105 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : Starting SpringBootOneToManyApplication using Java 19.0.1 on spartan-2.local with PID 28105 (/Users/spartan/Downloads/spring-boot-one-to-many-master 2/target/classes started by spartan in /Users/spartan/Downloads/spring-boot-one-to-many-master 2)
+२०२२-११-२५ १६:२७:०२.३५१  INFO 28105 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : No active profile set, falling back to default profiles: default
+२०२२-११-२५ १६:२७:०२.५९३  INFO 28105 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+२०२२-११-२५ १६:२७:०२.६१२  INFO 28105 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
+२०२२-११-२५ १६:२७:०२.८२४  INFO 28105 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+२०२२-११-२५ १६:२७:०२.८२८  INFO 28105 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+२०२२-११-२५ १६:२७:०२.८२८  INFO 28105 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+२०२२-११-२५ १६:२७:०२.८६४  INFO 28105 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+२०२२-११-२५ १६:२७:०२.८६४  INFO 28105 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 495 ms
+२०२२-११-२५ १६:२७:०२.९६३  INFO 28105 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+२०२२-११-२५ १६:२७:०२.९९४  INFO 28105 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+२०२२-११-२५ १६:२७:०३.११६  INFO 28105 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+२०२२-११-२५ १६:२७:०३.१६३  INFO 28105 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+२०२२-११-२५ १६:२७:०३.२७४  INFO 28105 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+२०२२-११-२५ १६:२७:०३.२८२  INFO 28105 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+२०२२-११-२५ १६:२७:०३.५२४ DEBUG 28105 --- [main] org.hibernate.SQL                        : alter table employee drop foreign key FKbejtwvg9bxus2mffsm3swj3u9
+२०२२-११-२५ १६:२७:०३.६१५ DEBUG 28105 --- [main] org.hibernate.SQL                        : drop table if exists department
+२०२२-११-२५ १६:२७:०३.६२३ DEBUG 28105 --- [main] org.hibernate.SQL                        : drop table if exists department_generator
+२०२२-११-२५ १६:२७:०३.६२६ DEBUG 28105 --- [main] org.hibernate.SQL                        : drop table if exists employee
+२०२२-११-२५ १६:२७:०३.६२९ DEBUG 28105 --- [main] org.hibernate.SQL                        : drop table if exists employee_generator
+२०२२-११-२५ १६:२७:०३.६३२ DEBUG 28105 --- [main] org.hibernate.SQL                        : create table department (id bigint not null, description varchar(255), published bit, name varchar(255), primary key (id)) engine=InnoDB
+२०२२-११-२५ १६:२७:०३.६४० DEBUG 28105 --- [main] org.hibernate.SQL                        : create table department_generator (next_val bigint) engine=InnoDB
+२०२२-११-२५ १६:२७:०३.६४५ DEBUG 28105 --- [main] org.hibernate.SQL                        : insert into department_generator values ( 1 )
+२०२२-११-२५ १६:२७:०३.६४८ DEBUG 28105 --- [main] org.hibernate.SQL                        : create table employee (id bigint not null, emp_name longtext, department_id bigint not null, primary key (id)) engine=InnoDB
+२०२२-११-२५ १६:२७:०३.६५४ DEBUG 28105 --- [main] org.hibernate.SQL                        : create table employee_generator (next_val bigint) engine=InnoDB
+२०२२-११-२५ १६:२७:०३.६५९ DEBUG 28105 --- [main] org.hibernate.SQL                        : insert into employee_generator values ( 1 )
+२०२२-११-२५ १६:२७:०३.६६१ DEBUG 28105 --- [main] org.hibernate.SQL                        : alter table employee add constraint FKbejtwvg9bxus2mffsm3swj3u9 foreign key (department_id) references department (id) on delete cascade
+२०२२-११-२५ १६:२७:०३.६७६  INFO 28105 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+२०२२-११-२५ १६:२७:०३.६८०  INFO 28105 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+२०२२-११-२५ १६:२७:०३.८५३  WARN 28105 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+२०२२-११-२५ १६:२७:०४.०३७  INFO 28105 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+२०२२-११-२५ १६:२७:०४.०४२  INFO 28105 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : Started SpringBootOneToManyApplication in 1.847 seconds (JVM running for 2.555)
+२०२२-११-२५ १६:२७:०४.०४३  INFO 28105 --- [main] c.b.spring.hibernate.onetomany.Execute   : Spartan Log4J
+२०२२-११-२५ १६:२७:०४.०४३  INFO 28105 --- [main] c.b.spring.hibernate.onetomany.Execute   : Test Log4J
+२०२२-११-२५ १६:२७:५१.०३२  INFO 28105 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+२०२२-११-२५ १६:२७:५१.०३४  INFO 28105 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+२०२२-११-२५ १६:२७:५१.०४२  INFO 28105 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+२०२२-११-२५ १६:२७:५४.८२०  INFO 28123 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : Starting SpringBootOneToManyApplication using Java 19.0.1 on spartan-2.local with PID 28123 (/Users/spartan/Downloads/spring-boot-one-to-many-master 2/target/classes started by spartan in /Users/spartan/Downloads/spring-boot-one-to-many-master 2)
+२०२२-११-२५ १६:२७:५४.८२१  INFO 28123 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : No active profile set, falling back to default profiles: default
+२०२२-११-२५ १६:२७:५५.०७०  INFO 28123 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+२०२२-११-२५ १६:२७:५५.०८९  INFO 28123 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
+२०२२-११-२५ १६:२७:५५.३०१  INFO 28123 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+२०२२-११-२५ १६:२७:५५.३०६  INFO 28123 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+२०२२-११-२५ १६:२७:५५.३०६  INFO 28123 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+२०२२-११-२५ १६:२७:५५.३४१  INFO 28123 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+२०२२-११-२५ १६:२७:५५.३४५  INFO 28123 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 505 ms
+२०२२-११-२५ १६:२७:५५.४२५  INFO 28123 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+२०२२-११-२५ १६:२७:५५.४४९  INFO 28123 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+२०२२-११-२५ १६:२७:५५.५१२  INFO 28123 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+२०२२-११-२५ १६:२७:५५.५४८  INFO 28123 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+२०२२-११-२५ १६:२७:५५.६१५  INFO 28123 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+२०२२-११-२५ १६:२७:५५.६२२  INFO 28123 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+२०२२-११-२५ १६:२७:५५.८५२ DEBUG 28123 --- [main] org.hibernate.SQL                        : create table department (id bigint not null, description varchar(255), published bit, name varchar(255), primary key (id)) engine=InnoDB
+२०२२-११-२५ १६:२७:५५.८७४ DEBUG 28123 --- [main] org.hibernate.SQL                        : create table department_generator (next_val bigint) engine=InnoDB
+२०२२-११-२५ १६:२७:५५.८८२ DEBUG 28123 --- [main] org.hibernate.SQL                        : insert into department_generator values ( 1 )
+२०२२-११-२५ १६:२७:५५.८८४ DEBUG 28123 --- [main] org.hibernate.SQL                        : create table employee (id bigint not null, emp_name longtext, department_id bigint not null, primary key (id)) engine=InnoDB
+२०२२-११-२५ १६:२७:५५.८९१ DEBUG 28123 --- [main] org.hibernate.SQL                        : create table employee_generator (next_val bigint) engine=InnoDB
+२०२२-११-२५ १६:२७:५५.८९८ DEBUG 28123 --- [main] org.hibernate.SQL                        : insert into employee_generator values ( 1 )
+२०२२-११-२५ १६:२७:५५.९०० DEBUG 28123 --- [main] org.hibernate.SQL                        : alter table employee add constraint FKbejtwvg9bxus2mffsm3swj3u9 foreign key (department_id) references department (id) on delete cascade
+२०२२-११-२५ १६:२७:५५.९११  INFO 28123 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+२०२२-११-२५ १६:२७:५५.९१६  INFO 28123 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+२०२२-११-२५ १६:२७:५६.०७१  WARN 28123 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+२०२२-११-२५ १६:२७:५६.२२८  INFO 28123 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+२०२२-११-२५ १६:२७:५६.२३३  INFO 28123 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : Started SpringBootOneToManyApplication in 1.568 seconds (JVM running for 1.986)
+२०२२-११-२५ १६:२७:५६.२३४  INFO 28123 --- [main] c.b.spring.hibernate.onetomany.Execute   : Spartan Log4J
+२०२२-११-२५ १६:२७:५६.२३४  INFO 28123 --- [main] c.b.spring.hibernate.onetomany.Execute   : Test Log4J
+२०२२-११-२५ १६:५३:१७.१४६  INFO 28123 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+२०२२-११-२५ १६:५३:१७.१५०  INFO 28123 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+२०२२-११-२५ १६:५३:१७.१७१  INFO 28123 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
+२०२२-११-२५ १६:५४:२९.८३३ DEBUG 28123 --- [http-nio-8081-exec-4] org.hibernate.SQL                        : select department0_.id as id1_0_, department0_.description as descript2_0_, department0_.published as publishe3_0_, department0_.name as name4_0_ from department department0_
+२०२२-११-२५ १६:५४:३९.७४७ DEBUG 28123 --- [http-nio-8081-exec-5] org.hibernate.SQL                        : select next_val as id_val from department_generator for update
+२०२२-११-२५ १६:५४:३९.७५४ DEBUG 28123 --- [http-nio-8081-exec-5] org.hibernate.SQL                        : update department_generator set next_val= ? where next_val=?
+२०२२-११-२५ १६:५४:३९.७७० DEBUG 28123 --- [http-nio-8081-exec-5] org.hibernate.SQL                        : select next_val as id_val from department_generator for update
+२०२२-११-२५ १६:५४:३९.७७० DEBUG 28123 --- [http-nio-8081-exec-5] org.hibernate.SQL                        : update department_generator set next_val= ? where next_val=?
+२०२२-११-२५ १६:५४:३९.७९१ DEBUG 28123 --- [http-nio-8081-exec-5] org.hibernate.SQL                        : insert into department (description, published, name, id) values (?, ?, ?, ?)
+२०२२-११-२५ १६:५४:३९.७९५ TRACE 28123 --- [http-nio-8081-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Project Manager]
+२०२२-११-२५ १६:५४:३९.७९५ TRACE 28123 --- [http-nio-8081-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BOOLEAN] - [true]
+२०२२-११-२५ १६:५४:३९.७९५ TRACE 28123 --- [http-nio-8081-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Software Engineer]
+२०२२-११-२५ १६:५४:३९.७९६ TRACE 28123 --- [http-nio-8081-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [1]
+२०२२-११-२५ १६:५४:४४.३८१ DEBUG 28123 --- [http-nio-8081-exec-6] org.hibernate.SQL                        : select department0_.id as id1_0_, department0_.description as descript2_0_, department0_.published as publishe3_0_, department0_.name as name4_0_ from department department0_
+२०२२-११-२५ १७:०३:३८.९००  INFO 28123 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+२०२२-११-२५ १७:०३:३८.९०७  INFO 28123 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+२०२२-११-२५ १७:०३:३८.९११  INFO 28123 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+२०२२-११-२५ १७:०३:४७.११७  INFO 28457 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : Starting SpringBootOneToManyApplication using Java 19.0.1 on spartan-2.local with PID 28457 (/Users/spartan/Downloads/spring-boot-one-to-many-master 2/target/classes started by spartan in /Users/spartan/Downloads/spring-boot-one-to-many-master 2)
+२०२२-११-२५ १७:०३:४७.११८  INFO 28457 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : No active profile set, falling back to default profiles: default
+२०२२-११-२५ १७:०३:४७.५३७  INFO 28457 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+२०२२-११-२५ १७:०३:४७.५६२  INFO 28457 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 2 JPA repository interfaces.
+२०२२-११-२५ १७:०३:४७.८०६  INFO 28457 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+२०२२-११-२५ १७:०३:४७.८१०  INFO 28457 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+२०२२-११-२५ १७:०३:४७.८११  INFO 28457 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+२०२२-११-२५ १७:०३:४७.८४६  INFO 28457 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+२०२२-११-२५ १७:०३:४७.८४६  INFO 28457 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 691 ms
+२०२२-११-२५ १७:०३:४७.९३१  INFO 28457 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+२०२२-११-२५ १७:०३:४७.९५४  INFO 28457 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+२०२२-११-२५ १७:०३:४८.०२०  INFO 28457 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+२०२२-११-२५ १७:०३:४८.०५९  INFO 28457 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+२०२२-११-२५ १७:०३:४८.१६९  INFO 28457 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+२०२२-११-२५ १७:०३:४८.१७८  INFO 28457 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+२०२२-११-२५ १७:०३:४८.५०२  INFO 28457 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+२०२२-११-२५ १७:०३:४८.५०६  INFO 28457 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+२०२२-११-२५ १७:०३:४८.६६७  WARN 28457 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+२०२२-११-२५ १७:०३:४८.८१९  INFO 28457 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+२०२२-११-२५ १७:०३:४८.८२४  INFO 28457 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : Started SpringBootOneToManyApplication in 2.019 seconds (JVM running for 2.515)
+२०२२-११-२५ १७:०३:४८.८२४  INFO 28457 --- [main] c.b.spring.hibernate.onetomany.Execute   : Spartan Log4J
+२०२२-११-२५ १७:०३:४८.८२४  INFO 28457 --- [main] c.b.spring.hibernate.onetomany.Execute   : Test Log4J
+२०२२-११-२५ १७:०३:५३.७९१  INFO 28457 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+२०२२-११-२५ १७:०३:५३.७९२  INFO 28457 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+२०२२-११-२५ १७:०३:५३.७९८  INFO 28457 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+२०२२-११-२५ १७:०४:१९.७६२ DEBUG 28457 --- [http-nio-8081-exec-2] org.hibernate.SQL                        : select employee0_.id as id1_1_0_, employee0_.department_id as departme3_1_0_, employee0_.emp_name as emp_name2_1_0_ from employee employee0_ where employee0_.id=?
+२०२२-११-२५ १७:०४:१९.७६४ TRACE 28457 --- [http-nio-8081-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+२०२२-११-२५ १७:०५:१०.६७९ DEBUG 28457 --- [http-nio-8081-exec-6] org.hibernate.SQL                        : select employee0_.id as id1_1_0_, employee0_.department_id as departme3_1_0_, employee0_.emp_name as emp_name2_1_0_ from employee employee0_ where employee0_.id=?
+२०२२-११-२५ १७:०५:१०.६८० TRACE 28457 --- [http-nio-8081-exec-6] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+२०२२-११-२५ १७:०७:०२.९१२ DEBUG 28457 --- [http-nio-8081-exec-3] org.hibernate.SQL                        : select department0_.id as id1_0_0_, department0_.description as descript2_0_0_, department0_.published as publishe3_0_0_, department0_.name as name4_0_0_ from department department0_ where department0_.id=?
+२०२२-११-२५ १७:०७:०२.९१३ TRACE 28457 --- [http-nio-8081-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+२०२२-११-२५ १७:०७:०२.९३५ DEBUG 28457 --- [http-nio-8081-exec-3] org.hibernate.SQL                        : select next_val as id_val from employee_generator for update
+२०२२-११-२५ १७:०७:०२.९४३ DEBUG 28457 --- [http-nio-8081-exec-3] org.hibernate.SQL                        : update employee_generator set next_val= ? where next_val=?
+२०२२-११-२५ १७:०७:०२.९५८ DEBUG 28457 --- [http-nio-8081-exec-3] org.hibernate.SQL                        : select next_val as id_val from employee_generator for update
+२०२२-११-२५ १७:०७:०२.९५९ DEBUG 28457 --- [http-nio-8081-exec-3] org.hibernate.SQL                        : update employee_generator set next_val= ? where next_val=?
+२०२२-११-२५ १७:०७:०२.९६८ DEBUG 28457 --- [http-nio-8081-exec-3] org.hibernate.SQL                        : insert into employee (department_id, emp_name, id) values (?, ?, ?)
+२०२२-११-२५ १७:०७:०२.९६९ TRACE 28457 --- [http-nio-8081-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+२०२२-११-२५ १७:०७:०२.९६९ TRACE 28457 --- [http-nio-8081-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [ramayana]
+२०२२-११-२५ १७:०७:०२.९६९ TRACE 28457 --- [http-nio-8081-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [1]
+२०२२-११-२५ १७:०८:०८.१६० DEBUG 28457 --- [http-nio-8081-exec-5] org.hibernate.SQL                        : select count(*) as col_0_0_ from department department0_ where department0_.id=?
+२०२२-११-२५ १७:०८:०८.१६१ TRACE 28457 --- [http-nio-8081-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+२०२२-११-२५ १७:०८:०८.१८१ DEBUG 28457 --- [http-nio-8081-exec-5] org.hibernate.SQL                        : select employee0_.id as id1_1_, employee0_.department_id as departme3_1_, employee0_.emp_name as emp_name2_1_ from employee employee0_ inner join department department1_ on employee0_.department_id=department1_.id where department1_.id=?
+२०२२-११-२५ १७:०८:०८.१८१ TRACE 28457 --- [http-nio-8081-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+२०२२-११-२५ १७:५८:५१.८२४  INFO 28457 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+२०२२-११-२५ १७:५८:५१.८४०  INFO 28457 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+२०२२-११-२५ १७:५८:५१.८५१  INFO 28457 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+२०२२-११-२५ १७:५८:५८.९०८  INFO 28886 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : Starting SpringBootOneToManyApplication using Java 19.0.1 on spartan-2.local with PID 28886 (/Users/spartan/Downloads/spring-boot-one-to-many-master 2/target/classes started by spartan in /Users/spartan/Downloads/spring-boot-one-to-many-master 2)
+२०२२-११-२५ १७:५८:५८.९०८  INFO 28886 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : No active profile set, falling back to default profiles: default
+२०२२-११-२५ १७:५८:५९.१५२  INFO 28886 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+२०२२-११-२५ १७:५८:५९.१७२  INFO 28886 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
+२०२२-११-२५ १७:५८:५९.३९९  INFO 28886 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+२०२२-११-२५ १७:५८:५९.४०३  INFO 28886 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+२०२२-११-२५ १७:५८:५९.४०३  INFO 28886 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+२०२२-११-२५ १७:५८:५९.४३४  INFO 28886 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+२०२२-११-२५ १७:५८:५९.४३५  INFO 28886 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 509 ms
+२०२२-११-२५ १७:५८:५९.५१६  INFO 28886 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+२०२२-११-२५ १७:५८:५९.५३८  INFO 28886 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+२०२२-११-२५ १७:५८:५९.६०५  INFO 28886 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+२०२२-११-२५ १७:५८:५९.६४५  INFO 28886 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+२०२२-११-२५ १७:५८:५९.७५०  INFO 28886 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+२०२२-११-२५ १७:५८:५९.७५८  INFO 28886 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+२०२२-११-२५ १७:५९:००.०८९  INFO 28886 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+२०२२-११-२५ १७:५९:००.०९७  INFO 28886 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+२०२२-११-२५ १७:५९:००.२६५  WARN 28886 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+२०२२-११-२५ १७:५९:००.४१४  INFO 28886 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+२०२२-११-२५ १७:५९:००.४१८  INFO 28886 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : Started SpringBootOneToManyApplication in 1.705 seconds (JVM running for 2.298)
+२०२२-११-२५ १७:५९:००.४१९  INFO 28886 --- [main] c.b.spring.hibernate.onetomany.Execute   : Spartan Log4J
+२०२२-११-२५ १७:५९:००.४१९  INFO 28886 --- [main] c.b.spring.hibernate.onetomany.Execute   : Test Log4J
