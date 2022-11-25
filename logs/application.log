@@ -1,0 +1,73 @@
+२०२२-११-२५ ११:१४:०९.५८७  INFO 24109 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : Starting SpringBootOneToManyApplication using Java 19.0.1 on spartan-2.local with PID 24109 (/Users/spartan/Downloads/spring-boot-one-to-many-master 2/target/classes started by spartan in /Users/spartan/Downloads/spring-boot-one-to-many-master 2)
+२०२२-११-२५ ११:१४:०९.५८७  INFO 24109 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : No active profile set, falling back to default profiles: default
+२०२२-११-२५ ११:१४:०९.८३५  INFO 24109 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+२०२२-११-२५ ११:१४:०९.८५४  INFO 24109 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
+२०२२-११-२५ ११:१४:१०.०६६  INFO 24109 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+२०२२-११-२५ ११:१४:१०.०७०  INFO 24109 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+२०२२-११-२५ ११:१४:१०.०७०  INFO 24109 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+२०२२-११-२५ ११:१४:१०.१०४  INFO 24109 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+२०२२-११-२५ ११:१४:१०.१०४  INFO 24109 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 496 ms
+२०२२-११-२५ ११:१४:१०.१९३  INFO 24109 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+२०२२-११-२५ ११:१४:१०.२१६  INFO 24109 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+२०२२-११-२५ ११:१४:१०.२८१  INFO 24109 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+२०२२-११-२५ ११:१४:१०.३२१  INFO 24109 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+२०२२-११-२५ ११:१४:१०.४२५  INFO 24109 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+२०२२-११-२५ ११:१४:१०.४३२  INFO 24109 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+२०२२-११-२५ ११:१४:१०.७२८  INFO 24109 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+२०२२-११-२५ ११:१४:१०.७३२  INFO 24109 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+२०२२-११-२५ ११:१४:१०.९०९  WARN 24109 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+२०२२-११-२५ ११:१४:११.०४८  INFO 24109 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+२०२२-११-२५ ११:१४:११.०५३  INFO 24109 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : Started SpringBootOneToManyApplication in 1.648 seconds (JVM running for 2.241)
+२०२२-११-२५ ११:१४:११.०५४  INFO 24109 --- [main] c.b.spring.hibernate.onetomany.Execute   : Spartan Log4J
+२०२२-११-२५ ११:१४:११.०५४  INFO 24109 --- [main] c.b.spring.hibernate.onetomany.Execute   : Test Log4J
+२०२२-११-२५ ११:२२:३०.०९८  INFO 24109 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+२०२२-११-२५ ११:२२:३०.१०१  INFO 24109 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+२०२२-११-२५ ११:२२:३०.१०७  INFO 24109 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+२०२२-११-२५ ११:२२:३६.६८५  INFO 24174 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : Starting SpringBootOneToManyApplication using Java 19.0.1 on spartan-2.local with PID 24174 (/Users/spartan/Downloads/spring-boot-one-to-many-master 2/target/classes started by spartan in /Users/spartan/Downloads/spring-boot-one-to-many-master 2)
+२०२२-११-२५ ११:२२:३६.६८५  INFO 24174 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : No active profile set, falling back to default profiles: default
+२०२२-११-२५ ११:२२:३६.९२२  INFO 24174 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+२०२२-११-२५ ११:२२:३६.९४२  INFO 24174 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
+२०२२-११-२५ ११:२२:३७.१४७  INFO 24174 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+२०२२-११-२५ ११:२२:३७.१५१  INFO 24174 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+२०२२-११-२५ ११:२२:३७.१५१  INFO 24174 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+२०२२-११-२५ ११:२२:३७.१८५  INFO 24174 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+२०२२-११-२५ ११:२२:३७.१८५  INFO 24174 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 482 ms
+२०२२-११-२५ ११:२२:३७.२६६  INFO 24174 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+२०२२-११-२५ ११:२२:३७.२९१  INFO 24174 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+२०२२-११-२५ ११:२२:३७.३६१  INFO 24174 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+२०२२-११-२५ ११:२२:३७.४०३  INFO 24174 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+२०२२-११-२५ ११:२२:३७.५०९  INFO 24174 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+२०२२-११-२५ ११:२२:३७.५१७  INFO 24174 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+२०२२-११-२५ ११:२२:३७.७८७  INFO 24174 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+२०२२-११-२५ ११:२२:३७.७९१  INFO 24174 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+२०२२-११-२५ ११:२२:३७.९४२  WARN 24174 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+२०२२-११-२५ ११:२२:३८.०७५  INFO 24174 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+२०२२-११-२५ ११:२२:३८.०८०  INFO 24174 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : Started SpringBootOneToManyApplication in 1.536 seconds (JVM running for 1.957)
+२०२२-११-२५ ११:२२:३८.०८०  INFO 24174 --- [main] c.b.spring.hibernate.onetomany.Execute   : Spartan Log4J
+२०२२-११-२५ ११:२२:३८.०८१  INFO 24174 --- [main] c.b.spring.hibernate.onetomany.Execute   : Test Log4J
+२०२२-११-२५ ११:५८:१२.०९४  WARN 24174 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=32m4s451ms).
+२०२२-११-२५ ११:५८:४२.५७१  INFO 24174 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+२०२२-११-२५ ११:५८:४२.५७६  INFO 24174 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+२०२२-११-२५ ११:५८:४२.५८७  INFO 24174 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+२०२२-११-२५ ११:५८:५२.७५६  INFO 24280 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : Starting SpringBootOneToManyApplication using Java 19.0.1 on spartan-2.local with PID 24280 (/Users/spartan/Downloads/spring-boot-one-to-many-master 2/target/classes started by spartan in /Users/spartan/Downloads/spring-boot-one-to-many-master 2)
+२०२२-११-२५ ११:५८:५२.७५७  INFO 24280 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : No active profile set, falling back to default profiles: default
+२०२२-११-२५ ११:५८:५३.०६५  INFO 24280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+२०२२-११-२५ ११:५८:५३.०८७  INFO 24280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+२०२२-११-२५ ११:५८:५३.३२४  INFO 24280 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+२०२२-११-२५ ११:५८:५३.३२९  INFO 24280 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+२०२२-११-२५ ११:५८:५३.३२९  INFO 24280 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+२०२२-११-२५ ११:५८:५३.३६६  INFO 24280 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+२०२२-११-२५ ११:५८:५३.३६६  INFO 24280 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 584 ms
+२०२२-११-२५ ११:५८:५३.४५३  INFO 24280 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+२०२२-११-२५ ११:५८:५३.४७६  INFO 24280 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+२०२२-११-२५ ११:५८:५३.५५४  INFO 24280 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+२०२२-११-२५ ११:५८:५३.५९५  INFO 24280 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+२०२२-११-२५ ११:५८:५३.७०६  INFO 24280 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+२०२२-११-२५ ११:५८:५३.७१४  INFO 24280 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+२०२२-११-२५ ११:५८:५४.००२  INFO 24280 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+२०२२-११-२५ ११:५८:५४.००६  INFO 24280 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+२०२२-११-२५ ११:५८:५४.१६५  WARN 24280 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+२०२२-११-२५ ११:५८:५४.३२७  INFO 24280 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+२०२२-११-२५ ११:५८:५४.३३२  INFO 24280 --- [main] c.b.s.h.o.SpringBootOneToManyApplication : Started SpringBootOneToManyApplication in 1.822 seconds (JVM running for 2.278)
+२०२२-११-२५ ११:५८:५४.३३३  INFO 24280 --- [main] c.b.spring.hibernate.onetomany.Execute   : Spartan Log4J
+२०२२-११-२५ ११:५८:५४.३३३  INFO 24280 --- [main] c.b.spring.hibernate.onetomany.Execute   : Test Log4J

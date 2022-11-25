@@ -20,7 +20,7 @@ import com.bezkoder.spring.hibernate.onetomany.model.Employee;
 import com.bezkoder.spring.hibernate.onetomany.repository.EmployeeRepository;
 import com.bezkoder.spring.hibernate.onetomany.repository.DepartmentRepository;
 
-@CrossOrigin(origins = "http://localhost:8081")
+//@CrossOrigin(origins = "http://localhost:8081")
 @RestController
 @RequestMapping("/api")
 public class EmployeeController {
