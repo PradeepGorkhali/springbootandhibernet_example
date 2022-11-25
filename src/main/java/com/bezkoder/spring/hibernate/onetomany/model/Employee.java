@@ -8,10 +8,10 @@ import org.hibernate.annotations.OnDeleteAction;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table(name = "comments")
-public class Comment {
+@Table(name = "employee")
+public class Employee {
   @Id
-  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "comment_generator")
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "employee_generator")
   private Long id;
 
   @Lob
@@ -19,10 +19,10 @@ public class Comment {
 
 //  @ManyToOne(fetch = FetchType.EAGER, optional = false)
   @ManyToOne(fetch = FetchType.LAZY, optional = false)
-  @JoinColumn(name = "tutorial_id", nullable = false)
+  @JoinColumn(name = "department_id", nullable = false)
   @OnDelete(action = OnDeleteAction.CASCADE)
   @JsonIgnore
-  private Tutorial tutorial;
+  private Department department;
 
   public Long getId() {
     return id;
@@ -36,12 +36,12 @@ public class Comment {
     this.content = content;
   }
 
-  public Tutorial getTutorial() {
-    return tutorial;
+  public Department getDepartment() {
+    return department;
   }
 
-  public void setTutorial(Tutorial tutorial) {
-    this.tutorial = tutorial;
+  public void setDepartment(Department department) {
+    this.department = department;
   }
 
 }

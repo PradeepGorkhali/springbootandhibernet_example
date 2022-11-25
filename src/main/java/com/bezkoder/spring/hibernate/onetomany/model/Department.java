@@ -3,11 +3,11 @@ package com.bezkoder.spring.hibernate.onetomany.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "tutorials")
-public class Tutorial {
+@Table(name = "department")
+public class Department {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "tutorial_generator")
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "department_generator")
   private long id;
 
   @Column(name = "title")
@@ -19,11 +19,11 @@ public class Tutorial {
   @Column(name = "published")
   private boolean published;
 
-  public Tutorial() {
+  public Department() {
 
   }
 
-  public Tutorial(String title, String description, boolean published) {
+  public Department(String title, String description, boolean published) {
     this.title = title;
     this.description = description;
     this.published = published;
