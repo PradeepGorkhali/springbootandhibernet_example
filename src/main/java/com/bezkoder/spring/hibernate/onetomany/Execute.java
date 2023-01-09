@@ -12,6 +12,6 @@ public class Execute implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        log.info("Spartan Log4J");
+        log.info("Spartan L");
     }
 }
